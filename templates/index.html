@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">AttendanceApp</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/attendance">Attendance Records</a></li>
+                <li><a href="/add_record">Add Attendance</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Effortless Attendance Management</h1>
+            <p>Track and manage student attendance efficiently.</p>
+            <div class="cta-buttons">
+                <a href="/add_record" class="btn primary">Add Attendance</a>
+                <a href="/attendance" class="btn secondary">View Records</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2025 Attendance Management. All rights reserved.</p>
+    </footer>
+</body>
+</html>

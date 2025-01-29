@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Attendance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">AttendanceApp</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/attendance">Attendance Records</a></li>
+                <li><a href="/add_record">Add Attendance</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Add Attendance Form using Table -->
+    <section class="add-attendance">
+        <h2>Add New Attendance Record</h2>
+        <form action="/add_record" method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Course ID</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="student_id" required></td>
+                        <td><input type="text" name="course_id" required></td>
+                        <td><input type="date" name="attendance_date" required></td>
+                        <td>
+                            <select name="attendance_status" required>
+                                <option value="present">Present</option>
+                                <option value="absent">Absent</option>
+                                <option value="late">Late</option>
+                            </select>
+                        </td>
+                        <td><button type="submit" class="btn primary">Add Record</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2025 Attendance Management. All rights reserved.</p>
+    </footer>
+</body>
+</html>
